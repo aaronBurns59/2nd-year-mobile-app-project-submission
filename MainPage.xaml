@@ -1,0 +1,219 @@
+﻿<Page
+    x:Class="AaronBurnsProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AaronBurnsProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="rootPage" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--Creating the rows and columns-->
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+            <!--Initial Choice for the game-->
+            <StackPanel x:Name="turn0" Orientation="Horizontal" Background="White" Height="100" Grid.Row="6" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Background="Brown" Margin="10">
+                <Ellipse x:Name="turn0_0" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn0_1" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn0_2" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn0_3" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+            </StackPanel><!-- feedback pegs-->
+            <Grid x:Name="feedBack" Background="Brown" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5">
+                    <Ellipse x:Name="FB0_0" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB0_1" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <Ellipse x:Name="FB0_2" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB0_3" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Subsiquent plays for game-->
+        <StackPanel x:Name="turn1" Orientation="Horizontal" Background="White" Height="100" Grid.Row="4" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Background="Brown" Margin="10">
+                <Ellipse x:Name="turn1_0" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn1_1" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn1_2" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn1_3" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+            </StackPanel>
+            <Grid x:Name="feedBack1" Background="Brown" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5">
+                    <Ellipse x:Name="FB1_0" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB1_1" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <Ellipse x:Name="FB1_2" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB1_3" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Subsiquent plays for game-->
+        <StackPanel x:Name="turn2" Orientation="Horizontal" Background="White" Height="100" Grid.Row="3" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Background="Brown" Margin="10">
+                <Ellipse x:Name="turn2_0" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn2_1" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn2_2" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn2_3" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+            </StackPanel>
+            <Grid x:Name="feedBack2" Background="Brown" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5">
+                    <Ellipse x:Name="FB2_0" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB2_1" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <Ellipse x:Name="FB2_2" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB2_3" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Subsiquent plays for game-->
+        <StackPanel x:Name="turn3" Orientation="Horizontal" Background="White" Height="100" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Background="Brown" Margin="10">
+                <Ellipse x:Name="turn3_0" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn3_1" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn3_2" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn3_3" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+            </StackPanel>
+            <Grid x:Name="feedBack3" Background="Brown" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5">
+                    <Ellipse x:Name="FB3_0" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB3_1" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <Ellipse x:Name="FB3_2" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB3_3" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Subsiquent plays for game-->
+        <StackPanel x:Name="turn4" Orientation="Horizontal" Background="White" Height="100" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Background="Brown" Margin="10">
+                <Ellipse x:Name="turn4_0" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn4_1" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn4_2" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+                <Ellipse x:Name="turn4_3" Fill="White" Height="50" Width="50" Margin="5" Tapped="Ellipse_Tapped"/>
+            </StackPanel>
+            <Grid x:Name="feedBack4" Background="Brown" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5">
+                    <Ellipse x:Name="FB4_0" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB4_1" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="5">
+                    <Ellipse x:Name="FB4_2" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+                    <Ellipse x:Name="FB4_3" Fill="Black" Height="30" Width="30"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <!--Subsiquent plays for game-->
+        <StackPanel x:Name="colorStkPan"  Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Canvas x:Name="canvasColor" Margin="10 0 0 45" Background="Beige" Visibility="Collapsed">
+                <Ellipse x:Name="color_elps_0" Width="40" Height="40" Fill="Blue" Canvas.Left="0" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_1" Width="40" Height="40" Fill="Red" Canvas.Left="40" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_2" Width="40" Height="40" Fill="Green" Canvas.Left="80" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_3" Width="40" Height="40" Fill="Black" Canvas.Left="120" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_4" Width="40" Height="40" Fill="Orange" Canvas.Left="160" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_5" Width="40" Height="40" Fill="Yellow" Canvas.Left="200" Tapped="color_elps_0_Tapped"/>
+                <Ellipse x:Name="color_elps_6" Width="40" Height="40" Fill="Purple" Canvas.Left="240" Tapped="color_elps_0_Tapped"/>
+            </Canvas>
+        </StackPanel>
+
+        <!--Answer stack panel-->
+        <StackPanel x:Name="answerPanel" Orientation="Horizontal" Background="Gray" Height="100" HorizontalAlignment="Center" Visibility="Collapsed">
+            <Ellipse x:Name="ans1" Fill="White" Height="50" Width="50" Margin="5"/>
+            <Ellipse x:Name="ans2" Fill="White" Height="50" Width="50" Margin="5"/>
+            <Ellipse x:Name="ans3" Fill="White" Height="50" Width="50" Margin="5"/>
+            <Ellipse x:Name="ans4" Fill="White" Height="50" Width="50" Margin="5"/>
+        </StackPanel>
+        
+        <!--Button that advances the game-->
+        <StackPanel x:Name="btnPanel" Grid.Column="1">
+            <Ellipse Fill="black" Width="40" Height="40" Margin="10" Tapped="button_Tapped"/>
+            <TextBlock Text="Start" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+    
+</Page>
